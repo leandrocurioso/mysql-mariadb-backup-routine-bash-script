@@ -5,7 +5,7 @@ A bash script to be implemented as a cron job to backup your MySQL or MariaDB da
 First of all open the file and config:
 
 backup_path="/desired/folder"<br/>
-user="YOUR DB USER"
+user="YOUR DB USER"<br/>
 password="YOUR DB PASSWORD"<br/>
 host="YOUR HOST ADDRESS"<br/>
 db_name="YOUR DB NAME"<br/>
@@ -14,11 +14,16 @@ keep_days=3
 
 # Execute
 Be sure to give the correct permission to execute the bash with:
-sudo chmod 700 /path/to/backup-mysql-mariadb.sh
+
+```shell
+// sudo chmod 700 /path/to/backup-mysql-mariadb.sh
+```
 
 # Add Bash Cron Job
+```shell
 crontab -e
 00 20 * * * /path/to/backup-mysql-mariadb.sh
+```
 In this case it’ll run every day at 8 PM.
 
 # Questions?
