@@ -19,7 +19,7 @@ Be sure to give the correct permission to execute the bash with:
 sudo chmod 700 /path/to/backup-mysql-mariadb.sh
 ```
 
-# Add Bash Cron Job
+# Add Bash as Cron Job
 ```shell
 crontab -e
 00 20 * * * /path/to/backup-mysql-mariadb.sh
