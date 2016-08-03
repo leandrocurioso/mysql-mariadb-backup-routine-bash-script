@@ -5,15 +5,20 @@ A bash script to be implemented as a cron job to backup your MySQL or MariaDB da
 First of all open the file and config:
 
 backup_path="/backup/destination/folder"<br/>
+
 user="YOUR DB USER"<br/>
+
 password="YOUR DB PASSWORD"<br/>
+
 host="YOUR HOST ADDRESS"<br/>
+
 db_name="YOUR DB NAME"<br/>
+
 keep_days=3
 * keep_days is the amount of days that the script will keep files. (Default last 3 days files)
+
 tables_truncate_after_dump
-* It's an array of table that will be truncated after the backup. Can be used if you want to truncate a log table.
-* Do not split with comma use only white space. Example tables_truncate_after_dump("table1" "table2")
+* It's an array of table that will be truncated after the backup. Can be used if you want to truncate a log table. Do not split with comma use only white space. Example tables_truncate_after_dump("table1" "table2")
 
 # Add Permission
 Be sure to give the correct permission to execute the bash with:
