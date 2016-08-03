@@ -9,7 +9,7 @@ declare user="YOUR DB USER"
 declare password="YOUR DB PASSWORD"
 declare host="YOUR HOST ADDRESS"
 declare db_name="YOUR DB NAME"
-declare -i Keep_days=3
+declare -i keep_days=3
 declare -i sleep_seconds=2
 declare date=$(date +"%Y-%m-%d")
 declare -a tables_truncate_after_dump=()
@@ -30,9 +30,9 @@ echo "2 - Dumping $db_name database..."
 sudo mysqldump --user=$user --password=$password --host=$host $db_name > $backup_path/$db_name-$date.sql
 sleep $sleep_seconds
 
-# Delete files older than $Keep_days
-echo "3 - Deleting backups older than $Keep_days days."
-sudo find $backup_path -mtime +$Keep_days -exec rm {} \;
+# Delete files older than $keep_days
+echo "3 - Deleting backups older than $keep_days days."
+sudo find $backup_path -mtime +$keep_days -exec rm {} \;
 
 echo "4 - Truncating tables.."
 
