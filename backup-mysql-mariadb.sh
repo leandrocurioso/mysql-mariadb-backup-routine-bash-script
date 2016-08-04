@@ -17,7 +17,7 @@ declare -a tables_truncate_after_dump=()
 # Other options
 echo "$(tput setaf 7)$(tput setab 4)"
 echo "==========================================================" 
-echo "# BEGINNING backup-mariadb.sh [$date]" 
+echo "# BEGINNING backup-mysql-mariadb.sh [$date]" 
 echo "# DEVELOPED BY Leandro Curioso <leandro.curioso@gmail.com>"
 echo "# TOTAL OF 5 STEPS"
 
@@ -46,7 +46,7 @@ do
 done
 echo "5 - DONE!"
 
-echo "# ENDING backup-mariadb.sh"
+echo "# ENDING backup-mysql-mariadb.sh"
 echo "==========================================================" 
 echo "$(tput sgr0)"
 
