@@ -30,6 +30,7 @@ sudo chmod 700 /path/to/backup-mysql-mariadb.sh
 # Add Bash as Cron Job
 ```bash
 sudo crontab -e
+//Add this in the end of file
 00 20 * * * /path/to/backup-mysql-mariadb.sh
 ```
 In this case it’ll run every day at 8 PM.
